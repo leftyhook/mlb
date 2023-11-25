@@ -12,7 +12,7 @@ The module's **Config** class will recognize the following sections and keys:
 
 | Section | Key                 | Description                                                                                                                         |
 | ------- |---------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| DIRS    | pitch_data          | The directory to read pitch data from and wirte it to                                                                               |
+| DIRS    | pitch_data          | The directory to read pitch data from and write it to                                                                               |
 | PATHS   | fangraphs_constants | The full file path to a file storing a table of fangraphs' FIP & wOBA constants                                                     | 
 | PATHS   | woba_constants      | The full file path to a file storing a table of FIP and wOBA constants. Can (and usually should be) the same as fangraphs_constants |                    
 
@@ -32,7 +32,7 @@ A script for harvesting MLB pitch data for a given season and writing it to file
 
 ### Supported Python Versions
 
-Python 3.9 and above
+Python 3.9 and above.
 
 ### Usage
 

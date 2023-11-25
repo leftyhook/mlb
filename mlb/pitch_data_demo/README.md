@@ -1,7 +1,7 @@
 # mlb.pitch_data_demo
 
 Demonstrating how to use 
-[pitch_data_harvester.py](https://github.com/leftyhook/mlb/blob/main/scripts/pitch_data_harvester.py) to download all 
+[pitch_data_harvester.py](https://github.com/leftyhook/mlb/blob/main/mlb/scripts/pitch_data_harvester.py) to download all 
 pitch data for a season.
 
 It will download the pitch data for the 2023 World Series directly into the pitch_data_demo directory.
@@ -13,8 +13,8 @@ It will download the pitch data for the 2023 World Series directly into the pitc
 3. On the command line, type ```run_demo.bat``` and press Enter!
 
 ## Output
-You will be able to see pitch_data_harvester log output printed to the console as the script runs. Upon completion, 
-the following files will have been created in your pitch_data_demo directory:
+pitch_data_harvester will log to the console as the script runs. Upon completion, the following files will have been 
+created in your pitch_data_demo directory (total size approximately 1.5 megabytes):
 
     FanGraphs.wOBA_and_FIP_Constants.csv
     PitchData.2023.WorldSeries.csv

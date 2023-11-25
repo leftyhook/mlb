@@ -39,7 +39,7 @@ class FanGraphsGuts:
             resp.raise_for_status()
 
     def get_woba_and_fip_constants(self) -> DataFrame:
-        """Returns the 'WOBA and FIP constants' table from fangraphs guts, as a dataframe."""
+        """Returns the 'wOBA and FIP constants' table from fangraphs guts, as a dataframe."""
         return self._get_table(params={"type": "cn"})
 
     def get_park_factors(self, season: int = current_mlb_season()) -> DataFrame:
@@ -69,13 +69,13 @@ class FanGraphsGuts:
 
 def download_woba_and_fip_constants(file_path: str):
     """
-    Download WOBA and FIP constants from fangraphs guts to a file.
+    Download wOBA and FIP constants from fangraphs guts to a file.
 
     Parameters:
         file_path (str): The path to the file to write.
     """
     fg = FanGraphsGuts()
-    logging.info("Getting WOBA and FIP constants from %s" % URL)
+    logging.info("Getting wOBA and FIP constants from %s" % URL)
     df = fg.get_woba_and_fip_constants()
     df.to_csv(file_path, index=False)
-    logging.info("Fangraphs WOBA and FIP constants written to %s" % file_path)
+    logging.info("Fangraphs wOBA and FIP constants written to %s" % file_path)

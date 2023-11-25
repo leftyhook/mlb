@@ -25,15 +25,16 @@ or search wrapper functions.
 One of the great features of the Statcast Search web page is that it allows users to download the pitch data that serves
 as the back end to their search queries. The data points included are too many to list here, but among the most
 interesting are:
+- Information on the game state (number of outs, runners on base, who the defensive players are, etc.) at the time of 
+the pitch.
 - The type of pitch thrown.
 - Velocity, spin rate, and location measurements of each pitch.
 - Exit velocities and launch angles of batted balls.
-- Information on the game state (number of outs, runners on base, who the defensive players are, etc.) at the time of the pitch.
 - [Expected statistics](https://baseballsavant.mlb.com/leaderboard/expected_statistics), 
 calculated by MLB and based on the historical outcomes of comparable batted balls.
 
-*This data is available for every pitch thrown in every MLB game!* It provides endless opportunities for users to perform
-their own statistical analysis.
+*This data is available for every pitch thrown in every MLB game since 2015![^1][^2]* It provides endless opportunities for 
+users to perform their own statistical analysis.
 
 ### PitchDataDownloadManager
 
@@ -72,11 +73,17 @@ NonBBE file along with the BBE data into a single file.
 ## Usage
 
 * For the best example of how to use the statcast package to download pitch data, see the 
-[pitch_data_harvester](https://github.com/leftyhook/mlb/blob/main/scripts/pitch_data_harvester.py) script.
+[pitch_data_harvester](https://github.com/leftyhook/mlb/blob/main/mlb/scripts/pitch_data_harvester.py) script.
 * The [pitch_data_demo](https://github.com/leftyhook/mlb/blob/main/mlb/pitch_data_demo) shows the pitch_data_harvester 
 script in action.
 
 <br/>
+
+[^1]: Pitch data from prior to 2015 is available, but without the statcast measurements and metrics.
+
+[^2]: Enhancements to the statcast system introduced in 2020 have improved the quality of tracking data. Pitch data from
+prior to 2020, while robust, has far more missing data points and lower accuracy of pitch type identification than what
+has been produced since.
 
 ### Disclaimer:
 
