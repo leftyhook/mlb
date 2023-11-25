@@ -1,0 +1,1177 @@
+{
+	"copyright": "Copyright 2023 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+	"teams": [
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 133,
+			"name": "Oakland Athletics",
+			"link": "/api/v1/teams/133",
+			"season": 1995,
+			"venue": {
+				"id": 10,
+				"name": "Oakland-Alameda County Coliseum",
+				"link": "/api/v1/venues/10"
+			},
+			"teamCode": "oak",
+			"fileCode": "oak",
+			"abbreviation": "OAK",
+			"teamName": "Athletics",
+			"locationName": "Oakland",
+			"firstYearOfPlay": "1901",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 200,
+				"name": "American League West",
+				"link": "/api/v1/divisions/200"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Oakland",
+			"franchiseName": "Oakland",
+			"clubName": "Athletics",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 134,
+			"name": "Pittsburgh Pirates",
+			"link": "/api/v1/teams/134",
+			"season": 1995,
+			"venue": {
+				"id": 27,
+				"name": "Three Rivers Stadium",
+				"link": "/api/v1/venues/27"
+			},
+			"teamCode": "pit",
+			"fileCode": "pit",
+			"abbreviation": "PIT",
+			"teamName": "Pirates",
+			"locationName": "Pittsburgh",
+			"firstYearOfPlay": "1882",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 205,
+				"name": "National League Central",
+				"link": "/api/v1/divisions/205"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Pittsburgh",
+			"franchiseName": "Pittsburgh",
+			"clubName": "Pirates",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 135,
+			"name": "San Diego Padres",
+			"link": "/api/v1/teams/135",
+			"season": 1995,
+			"venue": {
+				"id": 28,
+				"name": "Jack Murphy Stadium",
+				"link": "/api/v1/venues/28"
+			},
+			"teamCode": "sdn",
+			"fileCode": "sd",
+			"abbreviation": "SD",
+			"teamName": "Padres",
+			"locationName": "San Diego",
+			"firstYearOfPlay": "1968",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 203,
+				"name": "National League West",
+				"link": "/api/v1/divisions/203"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "San Diego",
+			"franchiseName": "San Diego",
+			"clubName": "Padres",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 136,
+			"name": "Seattle Mariners",
+			"link": "/api/v1/teams/136",
+			"season": 1995,
+			"venue": {
+				"id": 11,
+				"name": "The Kingdome",
+				"link": "/api/v1/venues/11"
+			},
+			"teamCode": "sea",
+			"fileCode": "sea",
+			"abbreviation": "SEA",
+			"teamName": "Mariners",
+			"locationName": "Seattle",
+			"firstYearOfPlay": "1977",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 200,
+				"name": "American League West",
+				"link": "/api/v1/divisions/200"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Seattle",
+			"franchiseName": "Seattle",
+			"clubName": "Mariners",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 137,
+			"name": "San Francisco Giants",
+			"link": "/api/v1/teams/137",
+			"season": 1995,
+			"venue": {
+				"id": 29,
+				"name": "Candlestick Park",
+				"link": "/api/v1/venues/29"
+			},
+			"teamCode": "sfn",
+			"fileCode": "sf",
+			"abbreviation": "SF",
+			"teamName": "Giants",
+			"locationName": "San Francisco",
+			"firstYearOfPlay": "1883",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 203,
+				"name": "National League West",
+				"link": "/api/v1/divisions/203"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "San Francisco",
+			"franchiseName": "San Francisco",
+			"clubName": "Giants",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 138,
+			"name": "St. Louis Cardinals",
+			"link": "/api/v1/teams/138",
+			"season": 1995,
+			"venue": {
+				"id": 30,
+				"name": "Busch Stadium",
+				"link": "/api/v1/venues/30"
+			},
+			"teamCode": "sln",
+			"fileCode": "stl",
+			"abbreviation": "STL",
+			"teamName": "Cardinals",
+			"locationName": "St. Louis",
+			"firstYearOfPlay": "1892",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 205,
+				"name": "National League Central",
+				"link": "/api/v1/divisions/205"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "St. Louis",
+			"franchiseName": "St. Louis",
+			"clubName": "Cardinals",
+			"active": true
+		},
+		{
+			"allStarStatus": "N",
+			"id": 140,
+			"name": "Texas Rangers",
+			"link": "/api/v1/teams/140",
+			"season": 1995,
+			"venue": {
+				"id": 13,
+				"name": "The Ballpark at Arlington",
+				"link": "/api/v1/venues/13"
+			},
+			"teamCode": "tex",
+			"fileCode": "tex",
+			"abbreviation": "TEX",
+			"teamName": "Rangers",
+			"locationName": "Arlington",
+			"firstYearOfPlay": "1961",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 200,
+				"name": "American League West",
+				"link": "/api/v1/divisions/200"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Texas",
+			"franchiseName": "Texas",
+			"clubName": "Rangers",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 141,
+			"name": "Toronto Blue Jays",
+			"link": "/api/v1/teams/141",
+			"season": 1995,
+			"venue": {
+				"id": 14,
+				"name": "SkyDome",
+				"link": "/api/v1/venues/14"
+			},
+			"teamCode": "tor",
+			"fileCode": "tor",
+			"abbreviation": "TOR",
+			"teamName": "Blue Jays",
+			"locationName": "Toronto",
+			"firstYearOfPlay": "1977",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 201,
+				"name": "American League East",
+				"link": "/api/v1/divisions/201"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Toronto",
+			"franchiseName": "Toronto",
+			"clubName": "Blue Jays",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 142,
+			"name": "Minnesota Twins",
+			"link": "/api/v1/teams/142",
+			"season": 1995,
+			"venue": {
+				"id": 8,
+				"name": "Hubert H. Humphrey Metrodome",
+				"link": "/api/v1/venues/8"
+			},
+			"teamCode": "min",
+			"fileCode": "min",
+			"abbreviation": "MIN",
+			"teamName": "Twins",
+			"locationName": "Minneapolis",
+			"firstYearOfPlay": "1901",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 202,
+				"name": "American League Central",
+				"link": "/api/v1/divisions/202"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Minnesota",
+			"franchiseName": "Minnesota",
+			"clubName": "Twins",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 143,
+			"name": "Philadelphia Phillies",
+			"link": "/api/v1/teams/143",
+			"season": 1995,
+			"venue": {
+				"id": 26,
+				"name": "Veterans Stadium",
+				"link": "/api/v1/venues/26"
+			},
+			"springVenue": {
+				"id": 2525,
+				"link": "/api/v1/venues/2525"
+			},
+			"teamCode": "phi",
+			"fileCode": "phi",
+			"abbreviation": "PHI",
+			"teamName": "Phillies",
+			"locationName": "Philadelphia",
+			"firstYearOfPlay": "1883",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 204,
+				"name": "National League East",
+				"link": "/api/v1/divisions/204"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Philadelphia",
+			"franchiseName": "Philadelphia",
+			"clubName": "Phillies",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 144,
+			"name": "Atlanta Braves",
+			"link": "/api/v1/teams/144",
+			"season": 1995,
+			"venue": {
+				"id": 3112,
+				"name": "Atlanta-Fulton County Stadium",
+				"link": "/api/v1/venues/3112"
+			},
+			"teamCode": "atl",
+			"fileCode": "atl",
+			"abbreviation": "ATL",
+			"teamName": "Braves",
+			"locationName": "Atlanta",
+			"firstYearOfPlay": "1871",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 204,
+				"name": "National League East",
+				"link": "/api/v1/divisions/204"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Atlanta",
+			"franchiseName": "Atlanta",
+			"clubName": "Braves",
+			"active": true
+		},
+		{
+			"allStarStatus": "N",
+			"id": 145,
+			"name": "Chicago White Sox",
+			"link": "/api/v1/teams/145",
+			"season": 1995,
+			"venue": {
+				"id": 4,
+				"name": "Comiskey Park",
+				"link": "/api/v1/venues/4"
+			},
+			"teamCode": "cha",
+			"fileCode": "cws",
+			"abbreviation": "CWS",
+			"teamName": "White Sox",
+			"locationName": "Chicago",
+			"firstYearOfPlay": "1901",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 202,
+				"name": "American League Central",
+				"link": "/api/v1/divisions/202"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Chi White Sox",
+			"franchiseName": "Chicago",
+			"clubName": "White Sox",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 146,
+			"name": "Florida Marlins",
+			"link": "/api/v1/teams/146",
+			"season": 1995,
+			"venue": {
+				"id": 20,
+				"name": "Joe Robbie Stadium",
+				"link": "/api/v1/venues/20"
+			},
+			"teamCode": "flo",
+			"fileCode": "fla",
+			"abbreviation": "FLA",
+			"teamName": "Marlins",
+			"locationName": "Miami",
+			"firstYearOfPlay": "1991",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 204,
+				"name": "National League East",
+				"link": "/api/v1/divisions/204"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Florida",
+			"franchiseName": "Florida",
+			"clubName": "Marlins",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 147,
+			"name": "New York Yankees",
+			"link": "/api/v1/teams/147",
+			"season": 1995,
+			"venue": {
+				"id": 9,
+				"name": "Yankee Stadium",
+				"link": "/api/v1/venues/9"
+			},
+			"teamCode": "nya",
+			"fileCode": "nyy",
+			"abbreviation": "NYY",
+			"teamName": "Yankees",
+			"locationName": "Bronx",
+			"firstYearOfPlay": "1903",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 201,
+				"name": "American League East",
+				"link": "/api/v1/divisions/201"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "NY Yankees",
+			"franchiseName": "New York",
+			"clubName": "Yankees",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 158,
+			"name": "Milwaukee Brewers",
+			"link": "/api/v1/teams/158",
+			"season": 1995,
+			"venue": {
+				"id": 23,
+				"name": "Milwaukee County Stadium",
+				"link": "/api/v1/venues/23"
+			},
+			"teamCode": "ml4",
+			"fileCode": "mil",
+			"abbreviation": "MIL",
+			"teamName": "Brewers",
+			"locationName": "Milwaukee",
+			"firstYearOfPlay": "1968",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 202,
+				"name": "American League Central",
+				"link": "/api/v1/divisions/202"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Milwaukee",
+			"franchiseName": "Milwaukee",
+			"clubName": "Brewers",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 108,
+			"name": "California Angels",
+			"link": "/api/v1/teams/108",
+			"season": 1995,
+			"venue": {
+				"id": 1,
+				"name": "Anaheim Stadium",
+				"link": "/api/v1/venues/1"
+			},
+			"teamCode": "cal",
+			"fileCode": "ana",
+			"abbreviation": "CAL",
+			"teamName": "Angels",
+			"locationName": "Anaheim",
+			"firstYearOfPlay": "1961",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 200,
+				"name": "American League West",
+				"link": "/api/v1/divisions/200"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "California",
+			"franchiseName": "California",
+			"clubName": "Angels",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 110,
+			"name": "Baltimore Orioles",
+			"link": "/api/v1/teams/110",
+			"season": 1995,
+			"venue": {
+				"id": 2,
+				"name": "Oriole Park at Camden Yards",
+				"link": "/api/v1/venues/2"
+			},
+			"teamCode": "bal",
+			"fileCode": "bal",
+			"abbreviation": "BAL",
+			"teamName": "Orioles",
+			"locationName": "Baltimore",
+			"firstYearOfPlay": "1901",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 201,
+				"name": "American League East",
+				"link": "/api/v1/divisions/201"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Baltimore",
+			"franchiseName": "Baltimore",
+			"clubName": "Orioles",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 111,
+			"name": "Boston Red Sox",
+			"link": "/api/v1/teams/111",
+			"season": 1995,
+			"venue": {
+				"id": 3,
+				"name": "Fenway Park",
+				"link": "/api/v1/venues/3"
+			},
+			"teamCode": "bos",
+			"fileCode": "bos",
+			"abbreviation": "BOS",
+			"teamName": "Red Sox",
+			"locationName": "Boston",
+			"firstYearOfPlay": "1901",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 201,
+				"name": "American League East",
+				"link": "/api/v1/divisions/201"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Boston",
+			"franchiseName": "Boston",
+			"clubName": "Red Sox",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 112,
+			"name": "Chicago Cubs",
+			"link": "/api/v1/teams/112",
+			"season": 1995,
+			"venue": {
+				"id": 17,
+				"name": "Wrigley Field",
+				"link": "/api/v1/venues/17"
+			},
+			"teamCode": "chn",
+			"fileCode": "chc",
+			"abbreviation": "CHC",
+			"teamName": "Cubs",
+			"locationName": "Chicago",
+			"firstYearOfPlay": "1874",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 205,
+				"name": "National League Central",
+				"link": "/api/v1/divisions/205"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Chi Cubs",
+			"franchiseName": "Chicago",
+			"clubName": "Cubs",
+			"active": true
+		},
+		{
+			"allStarStatus": "N",
+			"id": 113,
+			"name": "Cincinnati Reds",
+			"link": "/api/v1/teams/113",
+			"season": 1995,
+			"venue": {
+				"id": 18,
+				"name": "Riverfront Stadium",
+				"link": "/api/v1/venues/18"
+			},
+			"teamCode": "cin",
+			"fileCode": "cin",
+			"abbreviation": "CIN",
+			"teamName": "Reds",
+			"locationName": "Cincinnati",
+			"firstYearOfPlay": "1882",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 205,
+				"name": "National League Central",
+				"link": "/api/v1/divisions/205"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Cincinnati",
+			"franchiseName": "Cincinnati",
+			"clubName": "Reds",
+			"active": true
+		},
+		{
+			"allStarStatus": "N",
+			"id": 114,
+			"name": "Cleveland Indians",
+			"link": "/api/v1/teams/114",
+			"season": 1995,
+			"venue": {
+				"id": 5,
+				"name": "Jacobs Field",
+				"link": "/api/v1/venues/5"
+			},
+			"teamCode": "cle",
+			"fileCode": "cle",
+			"abbreviation": "CLE",
+			"teamName": "Indians",
+			"locationName": "Cleveland",
+			"firstYearOfPlay": "1901",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 202,
+				"name": "American League Central",
+				"link": "/api/v1/divisions/202"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Cleveland",
+			"franchiseName": "Cleveland",
+			"clubName": "Indians",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 114,
+				"name": "Cactus League",
+				"link": "/api/v1/league/114",
+				"abbreviation": "CL"
+			},
+			"allStarStatus": "N",
+			"id": 115,
+			"name": "Colorado Rockies",
+			"link": "/api/v1/teams/115",
+			"season": 1995,
+			"venue": {
+				"id": 19,
+				"name": "Coors Field",
+				"link": "/api/v1/venues/19"
+			},
+			"teamCode": "col",
+			"fileCode": "col",
+			"abbreviation": "COL",
+			"teamName": "Rockies",
+			"locationName": "Denver",
+			"firstYearOfPlay": "1992",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 203,
+				"name": "National League West",
+				"link": "/api/v1/divisions/203"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Colorado",
+			"franchiseName": "Colorado",
+			"clubName": "Rockies",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 116,
+			"name": "Detroit Tigers",
+			"link": "/api/v1/teams/116",
+			"season": 1995,
+			"venue": {
+				"id": 6,
+				"name": "Tiger Stadium",
+				"link": "/api/v1/venues/6"
+			},
+			"teamCode": "det",
+			"fileCode": "det",
+			"abbreviation": "DET",
+			"teamName": "Tigers",
+			"locationName": "Detroit",
+			"firstYearOfPlay": "1901",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 201,
+				"name": "American League East",
+				"link": "/api/v1/divisions/201"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Detroit",
+			"franchiseName": "Detroit",
+			"clubName": "Tigers",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 117,
+			"name": "Houston Astros",
+			"link": "/api/v1/teams/117",
+			"season": 1995,
+			"venue": {
+				"id": 21,
+				"name": "Astrodome",
+				"link": "/api/v1/venues/21"
+			},
+			"teamCode": "hou",
+			"fileCode": "hou",
+			"abbreviation": "HOU",
+			"teamName": "Astros",
+			"locationName": "Houston",
+			"firstYearOfPlay": "1962",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 205,
+				"name": "National League Central",
+				"link": "/api/v1/divisions/205"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Houston",
+			"franchiseName": "Houston",
+			"clubName": "Astros",
+			"active": true
+		},
+		{
+			"allStarStatus": "N",
+			"id": 118,
+			"name": "Kansas City Royals",
+			"link": "/api/v1/teams/118",
+			"season": 1995,
+			"venue": {
+				"id": 7,
+				"name": "Kauffman Stadium",
+				"link": "/api/v1/venues/7"
+			},
+			"teamCode": "kca",
+			"fileCode": "kc",
+			"abbreviation": "KC",
+			"teamName": "Royals",
+			"locationName": "Kansas City",
+			"firstYearOfPlay": "1968",
+			"league": {
+				"id": 103,
+				"name": "American League",
+				"link": "/api/v1/league/103"
+			},
+			"division": {
+				"id": 202,
+				"name": "American League Central",
+				"link": "/api/v1/divisions/202"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Kansas City",
+			"franchiseName": "Kansas City",
+			"clubName": "Royals",
+			"active": true
+		},
+		{
+			"allStarStatus": "N",
+			"id": 119,
+			"name": "Los Angeles Dodgers",
+			"link": "/api/v1/teams/119",
+			"season": 1995,
+			"venue": {
+				"id": 22,
+				"name": "Dodger Stadium",
+				"link": "/api/v1/venues/22"
+			},
+			"teamCode": "lan",
+			"fileCode": "la",
+			"abbreviation": "LA",
+			"teamName": "Dodgers",
+			"locationName": "Los Angeles",
+			"firstYearOfPlay": "1884",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 203,
+				"name": "National League West",
+				"link": "/api/v1/divisions/203"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Los Angeles",
+			"franchiseName": "Los Angeles",
+			"clubName": "Dodgers",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 120,
+			"name": "Montreal Expos",
+			"link": "/api/v1/teams/120",
+			"season": 1995,
+			"venue": {
+				"id": 24,
+				"name": "Olympic Stadium",
+				"link": "/api/v1/venues/24"
+			},
+			"teamCode": "mon",
+			"fileCode": "mon",
+			"abbreviation": "MON",
+			"teamName": "Expos",
+			"locationName": "Montreal",
+			"firstYearOfPlay": "1968",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 204,
+				"name": "National League East",
+				"link": "/api/v1/divisions/204"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "Montreal",
+			"franchiseName": "Montreal",
+			"clubName": "Expos",
+			"active": true
+		},
+		{
+			"springLeague": {
+				"id": 115,
+				"name": "Grapefruit League",
+				"link": "/api/v1/league/115",
+				"abbreviation": "GL"
+			},
+			"allStarStatus": "N",
+			"id": 121,
+			"name": "New York Mets",
+			"link": "/api/v1/teams/121",
+			"season": 1995,
+			"venue": {
+				"id": 25,
+				"name": "Shea Stadium",
+				"link": "/api/v1/venues/25"
+			},
+			"teamCode": "nyn",
+			"fileCode": "nym",
+			"abbreviation": "NYM",
+			"teamName": "Mets",
+			"locationName": "Flushing",
+			"firstYearOfPlay": "1962",
+			"league": {
+				"id": 104,
+				"name": "National League",
+				"link": "/api/v1/league/104"
+			},
+			"division": {
+				"id": 204,
+				"name": "National League East",
+				"link": "/api/v1/divisions/204"
+			},
+			"sport": {
+				"id": 1,
+				"link": "/api/v1/sports/1",
+				"name": "Major League Baseball"
+			},
+			"shortName": "NY Mets",
+			"franchiseName": "New York",
+			"clubName": "Mets",
+			"active": true
+		}
+	]
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlb"
+version = "0.0.1"
+requires-python = ">=3.9"
+dependencies = [
+#    "requests",
+#    "numpy",
+#    "pandas",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+mlb = ["pitch_data_demo/*"]
+
+[tool.setuptools.exclude-package-data]
+mlb = ["pitch_data_demo/*.csv"]

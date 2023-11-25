@@ -1,0 +1,449 @@
+{
+	"copyright": "Copyright 2023 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+	"totalItems": 5,
+	"totalEvents": 0,
+	"totalGames": 5,
+	"totalGamesInProgress": 0,
+	"dates": [
+		{
+			"date": "2023-10-27",
+			"totalItems": 1,
+			"totalEvents": 0,
+			"totalGames": 1,
+			"totalGamesInProgress": 0,
+			"games": [
+				{
+					"gamePk": 748542,
+					"gameGuid": "2c02da53-e7c5-4017-8d9c-059c0506dc51",
+					"link": "/api/v1.1/game/748542/feed/live",
+					"gameType": "W",
+					"season": "2023",
+					"gameDate": "2023-10-28T00:05:00Z",
+					"officialDate": "2023-10-27",
+					"status": {
+						"abstractGameState": "Final",
+						"codedGameState": "F",
+						"detailedState": "Final",
+						"statusCode": "F",
+						"startTimeTBD": false,
+						"abstractGameCode": "F"
+					},
+					"teams": {
+						"away": {
+							"leagueRecord": {
+								"wins": 0,
+								"losses": 1,
+								"pct": ".000"
+							},
+							"score": 5,
+							"team": {
+								"id": 109,
+								"name": "Arizona Diamondbacks",
+								"link": "/api/v1/teams/109"
+							},
+							"isWinner": false,
+							"splitSquad": false,
+							"seriesNumber": 1
+						},
+						"home": {
+							"leagueRecord": {
+								"wins": 1,
+								"losses": 0,
+								"pct": "1.000"
+							},
+							"score": 6,
+							"team": {
+								"id": 140,
+								"name": "Texas Rangers",
+								"link": "/api/v1/teams/140"
+							},
+							"isWinner": true,
+							"splitSquad": false,
+							"seriesNumber": 1
+						}
+					},
+					"venue": {
+						"id": 5325,
+						"name": "Globe Life Field",
+						"link": "/api/v1/venues/5325"
+					},
+					"content": {
+						"link": "/api/v1/game/748542/content"
+					},
+					"isTie": false,
+					"gameNumber": 1,
+					"publicFacing": true,
+					"doubleHeader": "N",
+					"gamedayType": "P",
+					"tiebreaker": "N",
+					"calendarEventID": "14-748542-2023-10-27",
+					"seasonDisplay": "2023",
+					"dayNight": "night",
+					"description": "World Series Game 1",
+					"scheduledInnings": 9,
+					"reverseHomeAwayStatus": false,
+					"inningBreakLength": 175,
+					"gamesInSeries": 7,
+					"seriesGameNumber": 1,
+					"seriesDescription": "World Series",
+					"recordSource": "S",
+					"ifNecessary": "N",
+					"ifNecessaryDescription": "Normal Game"
+				}
+			],
+			"events": []
+		},
+		{
+			"date": "2023-10-28",
+			"totalItems": 1,
+			"totalEvents": 0,
+			"totalGames": 1,
+			"totalGamesInProgress": 0,
+			"games": [
+				{
+					"gamePk": 748541,
+					"gameGuid": "95ce9e6a-bc4c-467f-bc0f-22d389358e92",
+					"link": "/api/v1.1/game/748541/feed/live",
+					"gameType": "W",
+					"season": "2023",
+					"gameDate": "2023-10-29T00:03:00Z",
+					"officialDate": "2023-10-28",
+					"status": {
+						"abstractGameState": "Final",
+						"codedGameState": "F",
+						"detailedState": "Final",
+						"statusCode": "F",
+						"startTimeTBD": false,
+						"abstractGameCode": "F"
+					},
+					"teams": {
+						"away": {
+							"leagueRecord": {
+								"wins": 1,
+								"losses": 1,
+								"pct": ".500"
+							},
+							"score": 9,
+							"team": {
+								"id": 109,
+								"name": "Arizona Diamondbacks",
+								"link": "/api/v1/teams/109"
+							},
+							"isWinner": true,
+							"splitSquad": false,
+							"seriesNumber": 1
+						},
+						"home": {
+							"leagueRecord": {
+								"wins": 1,
+								"losses": 1,
+								"pct": ".500"
+							},
+							"score": 1,
+							"team": {
+								"id": 140,
+								"name": "Texas Rangers",
+								"link": "/api/v1/teams/140"
+							},
+							"isWinner": false,
+							"splitSquad": false,
+							"seriesNumber": 1
+						}
+					},
+					"venue": {
+						"id": 5325,
+						"name": "Globe Life Field",
+						"link": "/api/v1/venues/5325"
+					},
+					"content": {
+						"link": "/api/v1/game/748541/content"
+					},
+					"isTie": false,
+					"gameNumber": 1,
+					"publicFacing": true,
+					"doubleHeader": "N",
+					"gamedayType": "P",
+					"tiebreaker": "N",
+					"calendarEventID": "14-748541-2023-10-28",
+					"seasonDisplay": "2023",
+					"dayNight": "night",
+					"description": "World Series Game 2",
+					"scheduledInnings": 9,
+					"reverseHomeAwayStatus": false,
+					"inningBreakLength": 175,
+					"gamesInSeries": 7,
+					"seriesGameNumber": 2,
+					"seriesDescription": "World Series",
+					"recordSource": "S",
+					"ifNecessary": "N",
+					"ifNecessaryDescription": "Normal Game"
+				}
+			],
+			"events": []
+		},
+		{
+			"date": "2023-10-30",
+			"totalItems": 1,
+			"totalEvents": 0,
+			"totalGames": 1,
+			"totalGamesInProgress": 0,
+			"games": [
+				{
+					"gamePk": 748540,
+					"gameGuid": "23481542-b0d7-4b8b-9d7f-044bfe95f8e6",
+					"link": "/api/v1.1/game/748540/feed/live",
+					"gameType": "W",
+					"season": "2023",
+					"gameDate": "2023-10-31T00:03:00Z",
+					"officialDate": "2023-10-30",
+					"status": {
+						"abstractGameState": "Final",
+						"codedGameState": "F",
+						"detailedState": "Final",
+						"statusCode": "F",
+						"startTimeTBD": false,
+						"abstractGameCode": "F"
+					},
+					"teams": {
+						"away": {
+							"leagueRecord": {
+								"wins": 2,
+								"losses": 1,
+								"pct": ".667"
+							},
+							"score": 3,
+							"team": {
+								"id": 140,
+								"name": "Texas Rangers",
+								"link": "/api/v1/teams/140"
+							},
+							"isWinner": true,
+							"splitSquad": false,
+							"seriesNumber": 1
+						},
+						"home": {
+							"leagueRecord": {
+								"wins": 1,
+								"losses": 2,
+								"pct": ".333"
+							},
+							"score": 1,
+							"team": {
+								"id": 109,
+								"name": "Arizona Diamondbacks",
+								"link": "/api/v1/teams/109"
+							},
+							"isWinner": false,
+							"splitSquad": false,
+							"seriesNumber": 1
+						}
+					},
+					"venue": {
+						"id": 15,
+						"name": "Chase Field",
+						"link": "/api/v1/venues/15"
+					},
+					"content": {
+						"link": "/api/v1/game/748540/content"
+					},
+					"isTie": false,
+					"gameNumber": 1,
+					"publicFacing": true,
+					"doubleHeader": "N",
+					"gamedayType": "P",
+					"tiebreaker": "N",
+					"calendarEventID": "14-748540-2023-10-30",
+					"seasonDisplay": "2023",
+					"dayNight": "night",
+					"description": "World Series Game 3",
+					"scheduledInnings": 9,
+					"reverseHomeAwayStatus": false,
+					"inningBreakLength": 175,
+					"gamesInSeries": 7,
+					"seriesGameNumber": 3,
+					"seriesDescription": "World Series",
+					"recordSource": "S",
+					"ifNecessary": "N",
+					"ifNecessaryDescription": "Normal Game"
+				}
+			],
+			"events": []
+		},
+		{
+			"date": "2023-10-31",
+			"totalItems": 1,
+			"totalEvents": 0,
+			"totalGames": 1,
+			"totalGamesInProgress": 0,
+			"games": [
+				{
+					"gamePk": 748535,
+					"gameGuid": "f6065a09-eed1-4e8e-a29f-52d6a6888754",
+					"link": "/api/v1.1/game/748535/feed/live",
+					"gameType": "W",
+					"season": "2023",
+					"gameDate": "2023-11-01T00:03:00Z",
+					"officialDate": "2023-10-31",
+					"status": {
+						"abstractGameState": "Final",
+						"codedGameState": "F",
+						"detailedState": "Final",
+						"statusCode": "F",
+						"startTimeTBD": false,
+						"abstractGameCode": "F"
+					},
+					"teams": {
+						"away": {
+							"leagueRecord": {
+								"wins": 3,
+								"losses": 1,
+								"pct": ".750"
+							},
+							"score": 11,
+							"team": {
+								"id": 140,
+								"name": "Texas Rangers",
+								"link": "/api/v1/teams/140"
+							},
+							"isWinner": true,
+							"splitSquad": false,
+							"seriesNumber": 1
+						},
+						"home": {
+							"leagueRecord": {
+								"wins": 1,
+								"losses": 3,
+								"pct": ".250"
+							},
+							"score": 7,
+							"team": {
+								"id": 109,
+								"name": "Arizona Diamondbacks",
+								"link": "/api/v1/teams/109"
+							},
+							"isWinner": false,
+							"splitSquad": false,
+							"seriesNumber": 1
+						}
+					},
+					"venue": {
+						"id": 15,
+						"name": "Chase Field",
+						"link": "/api/v1/venues/15"
+					},
+					"content": {
+						"link": "/api/v1/game/748535/content"
+					},
+					"isTie": false,
+					"gameNumber": 1,
+					"publicFacing": true,
+					"doubleHeader": "N",
+					"gamedayType": "P",
+					"tiebreaker": "N",
+					"calendarEventID": "14-748535-2023-10-31",
+					"seasonDisplay": "2023",
+					"dayNight": "night",
+					"description": "World Series Game 4",
+					"scheduledInnings": 9,
+					"reverseHomeAwayStatus": false,
+					"inningBreakLength": 175,
+					"gamesInSeries": 7,
+					"seriesGameNumber": 4,
+					"seriesDescription": "World Series",
+					"recordSource": "S",
+					"ifNecessary": "N",
+					"ifNecessaryDescription": "Normal Game"
+				}
+			],
+			"events": []
+		},
+		{
+			"date": "2023-11-01",
+			"totalItems": 1,
+			"totalEvents": 0,
+			"totalGames": 1,
+			"totalGamesInProgress": 0,
+			"games": [
+				{
+					"gamePk": 748534,
+					"gameGuid": "f3f76a5b-9530-4e02-99f1-40d4ce443e8c",
+					"link": "/api/v1.1/game/748534/feed/live",
+					"gameType": "W",
+					"season": "2023",
+					"gameDate": "2023-11-02T00:03:00Z",
+					"officialDate": "2023-11-01",
+					"status": {
+						"abstractGameState": "Final",
+						"codedGameState": "F",
+						"detailedState": "Final",
+						"statusCode": "F",
+						"startTimeTBD": false,
+						"abstractGameCode": "F"
+					},
+					"teams": {
+						"away": {
+							"leagueRecord": {
+								"wins": 4,
+								"losses": 1,
+								"pct": ".800"
+							},
+							"score": 5,
+							"team": {
+								"id": 140,
+								"name": "Texas Rangers",
+								"link": "/api/v1/teams/140"
+							},
+							"isWinner": true,
+							"splitSquad": false,
+							"seriesNumber": 1
+						},
+						"home": {
+							"leagueRecord": {
+								"wins": 1,
+								"losses": 4,
+								"pct": ".200"
+							},
+							"score": 0,
+							"team": {
+								"id": 109,
+								"name": "Arizona Diamondbacks",
+								"link": "/api/v1/teams/109"
+							},
+							"isWinner": false,
+							"splitSquad": false,
+							"seriesNumber": 1
+						}
+					},
+					"venue": {
+						"id": 15,
+						"name": "Chase Field",
+						"link": "/api/v1/venues/15"
+					},
+					"content": {
+						"link": "/api/v1/game/748534/content"
+					},
+					"isTie": false,
+					"gameNumber": 1,
+					"publicFacing": true,
+					"doubleHeader": "N",
+					"gamedayType": "P",
+					"tiebreaker": "N",
+					"calendarEventID": "14-748534-2023-11-01",
+					"seasonDisplay": "2023",
+					"dayNight": "night",
+					"description": "World Series Game 5",
+					"scheduledInnings": 9,
+					"reverseHomeAwayStatus": false,
+					"inningBreakLength": 175,
+					"gamesInSeries": 7,
+					"seriesGameNumber": 5,
+					"seriesDescription": "World Series",
+					"recordSource": "S",
+					"ifNecessary": "N",
+					"ifNecessaryDescription": "Normal Game"
+				}
+			],
+			"events": []
+		}
+	]
+}
