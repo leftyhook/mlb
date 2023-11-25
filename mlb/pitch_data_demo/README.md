@@ -6,6 +6,14 @@ pitch data for a season.
 
 It will download the pitch data for the 2023 World Series directly into the pitch_data_demo directory.
 
+## Supported Architectures
+
+- Windows 10 and above
+
+## Supported Python Versions
+
+- Python 3.9 and above
+
 ## Run
 
 1. [Install](https://github.com/leftyhook/mlb/tree/main#install) the mlb package.
