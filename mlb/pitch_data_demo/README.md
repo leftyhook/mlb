@@ -8,7 +8,7 @@ It will download the pitch data for the 2023 World Series directly into the pitc
 
 ## Run
 
-1. [Install](https://github.com/leftyhook/mlb/blob/main/mlb/README.md#mlb-install) the mlb package.
+1. [Install](https://github.com/leftyhook/mlb/tree/main#install) the mlb package.
 2. From a command prompt, change the working directory to \<package installation location>\mlb\pitch_data_demo.
 3. On the command line, type ```run_demo.bat``` and press Enter!
 
