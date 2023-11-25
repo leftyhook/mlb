@@ -9,7 +9,7 @@ from os import path
 
 class Config:
     def __init__(self, file_path: str):
-        parser = configparser.SafeConfigParser(interpolation=configparser.ExtendedInterpolation())
+        parser = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
 
         if not path.exists(file_path):
             raise FileNotFoundError(f"Config file {file_path} not found.")

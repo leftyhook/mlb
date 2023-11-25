@@ -4,8 +4,7 @@ import datetime
 import logging
 import logging.config
 
-from scripts.mlb_config import Config
-
+from mlb.scripts.mlb_config import Config
 from mlb.utils.file_utils import add_date_to_file_name
 from mlb.statsapi import statsapi
 from mlb.stats import woba
