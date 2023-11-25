@@ -15,7 +15,7 @@ Python 3.9 and above
     ```
 - This will generate a new wheel file in /dist subdirectory of root. Note the name of the file for the installation step.
 
-## Install {#mlb-install}
+## Install
 
 - The package can be installed from the new wheel file with [pip](https://pypi.org/project/pip/).
 - From the /dist subdirectory, run either of the following commands (replacing items in \<> with the appropriate 
