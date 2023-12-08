@@ -13,8 +13,6 @@ from mlb.statcast.pitch_data import SeasonPitchData
 DEFAULT_LOG_LEVEL_STDOUT = 'DEBUG'
 DEFAULT_LOG_LEVEL_FILE = 'INFO'
 
-logger = logging.getLogger()
-
 
 def configure_logging(log_level: str, log_file: str = None):
     """
@@ -156,7 +154,7 @@ def main(cmd_line_args: list):
 
         configure_logging(parsed_args.log_level, parsed_args.log_file)
         logging.info("Running Python version %s" % sys.version)
-        logger.info(
+        logging.info(
             "pitch_data_harvester started with command line arguments: %s" % str(cmd_line_args)
         )
 
