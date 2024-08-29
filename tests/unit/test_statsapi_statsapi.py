@@ -193,6 +193,7 @@ class TestGetAllTeamsForSeason(unittest.TestCase):
             )
         )
 
+
 @patch("mlb.statsapi.statsapi._get_api_payload")
 class TestScheduleFunctions(unittest.TestCase):
     """
