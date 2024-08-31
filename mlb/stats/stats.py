@@ -1,7 +1,3 @@
-from pandas.core.series import Series
-from pandas import DataFrame
-
-
 class Stats:
     def __init__(self):
         self.balls = 0
