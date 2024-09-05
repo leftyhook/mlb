@@ -188,3 +188,49 @@ class Stats:
 
         self._increment_batted_ball_type(pitch["bb_type"])
         self._increment_lsa_type(pitch["launch_speed_angle"])
+
+
+def combine_stats(stats1: Stats, stats2: Stats) -> Stats:
+    combined_stats = Stats()
+    combined_stats.balls = stats1.balls + stats2.balls
+    combined_stats.called_strikes = stats1.called_strikes + stats2.called_strikes
+    combined_stats.swinging_strikes = stats1.swinging_strikes + stats2.swinging_strikes
+    combined_stats.fouls = stats1.fouls + stats2.fouls
+    combined_stats.missed_bunts = stats1.missed_bunts + stats2.missed_bunts
+    combined_stats.two_strike_pitches = stats1.two_strike_pitches + stats2.two_strike_pitches
+    combined_stats.number_of_pitches = stats1.number_of_pitches + stats2.number_of_pitches
+    combined_stats.plate_appearances = stats1.plate_appearances + stats2.plate_appearances
+    combined_stats.at_bats = stats1.at_bats + stats2.at_bats
+    combined_stats.singles = stats1.singles + stats2.singles
+    combined_stats.doubles = stats1.doubles + stats2.doubles
+    combined_stats.triples = stats1.triples + stats2.triples
+    combined_stats.home_runs = stats1.home_runs + stats2.home_runs
+    combined_stats.walks = stats1.walks + stats2.walks
+    combined_stats.hit_by_pitches = stats1.hit_by_pitches + stats2.hit_by_pitches
+    combined_stats.strikeouts = stats1.strikeouts + stats2.strikeouts
+    combined_stats.fly_balls = stats1.fly_balls + stats2.fly_balls
+    combined_stats.ground_balls = stats1.ground_balls + stats2.ground_balls
+    combined_stats.line_drives = stats1.line_drives + stats2.line_drives
+    combined_stats.popups = stats1.popups + stats2.popups
+    combined_stats.woba_value = stats1.woba_value + stats2.woba_value
+    combined_stats.woba_denom = stats1.woba_denom + stats2.woba_denom
+    combined_stats.wobacon_value = stats1.wobacon_value + stats2.wobacon_value
+    combined_stats.wobacon_denom = stats1.wobacon_denom + stats2.wobacon_denom
+    combined_stats.xwobacon_value = stats1.xwobacon_value + stats2.xwobacon_value
+    combined_stats.estimated_ba_using_speedangle = (
+            stats1.estimated_ba_using_speedangle + stats2.estimated_ba_using_speedangle
+    )
+    combined_stats.estimated_woba_using_speedangle = (
+            stats1.estimated_woba_using_speedangle + stats2.estimated_woba_using_speedangle
+    )
+    combined_stats.hard_hit_balls = stats1.hard_hit_balls + stats2.hard_hit_balls
+    combined_stats.lsa_weak = stats1.lsa_weak + stats2.lsa_weak
+    combined_stats.lsa_topped = stats1.lsa_topped + stats2.lsa_topped
+    combined_stats.lsa_under = stats1.lsa_under + stats2.lsa_under
+    combined_stats.lsa_flare_burner = stats1.lsa_flare_burner + stats2.lsa_flare_burner
+    combined_stats.lsa_solid = stats1.lsa_solid + stats2.lsa_solid
+    combined_stats.lsa_barrel = stats1.lsa_barrel + stats2.lsa_barrel
+    combined_stats.stolen_bases = stats1.stolen_bases + stats2.stolen_bases
+    combined_stats.caught_stealing = stats1.caught_stealing + stats2.caught_stealing
+
+    return combined_stats
