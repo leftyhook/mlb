@@ -1,12 +1,14 @@
 class Stats:
+    pitches: list[dict]
+
     def __init__(self):
+        self.pitches = []
         self.balls = 0
         self.called_strikes = 0
         self.swinging_strikes = 0
         self.fouls = 0
         self.missed_bunts = 0
         self.two_strike_pitches = 0
-        self.number_of_pitches = 0
         self.plate_appearances = 0
         self.at_bats = 0
         self.singles = 0
@@ -37,8 +39,11 @@ class Stats:
         self.stolen_bases = 0
         self.caught_stealing = 0
 
+    def number_of_pitches(self):
+        return len(self.pitches)
+
     def swings(self):
-        return self.number_of_pitches - self.balls - self.called_strikes
+        return self.number_of_pitches() - self.balls - self.called_strikes
 
     def hits(self):
         return self.singles + self.doubles + self.triples + self.home_runs
@@ -77,7 +82,7 @@ class Stats:
         return self.strikeouts / self.plate_appearances
 
     def swinging_strike_percentage(self):
-        return self.swinging_strikes / self.number_of_pitches
+        return self.swinging_strikes / self.number_of_pitches()
 
     def whiff_rate(self):
         return self.swinging_strikes / self.swings()
@@ -125,7 +130,7 @@ class Stats:
                 self.popups += 1
 
     def add_pitch(self, pitch):
-        self.number_of_pitches += 1
+        self.pitches.append(pitch)
 
         # A batter does not receive a plate appearance if a runner is thrown out on the bases to end the inning while
         # he is at bat, or if the game-winning run scores on a balk, wild pitch, or passed ball while he is at bat.
@@ -198,13 +203,13 @@ class Stats:
 
 def combine_stats(stats1: Stats, stats2: Stats) -> Stats:
     combined_stats = Stats()
+    combined_stats.pitches = stats1.pitches + stats2.pitches
     combined_stats.balls = stats1.balls + stats2.balls
     combined_stats.called_strikes = stats1.called_strikes + stats2.called_strikes
     combined_stats.swinging_strikes = stats1.swinging_strikes + stats2.swinging_strikes
     combined_stats.fouls = stats1.fouls + stats2.fouls
     combined_stats.missed_bunts = stats1.missed_bunts + stats2.missed_bunts
     combined_stats.two_strike_pitches = stats1.two_strike_pitches + stats2.two_strike_pitches
-    combined_stats.number_of_pitches = stats1.number_of_pitches + stats2.number_of_pitches
     combined_stats.plate_appearances = stats1.plate_appearances + stats2.plate_appearances
     combined_stats.at_bats = stats1.at_bats + stats2.at_bats
     combined_stats.singles = stats1.singles + stats2.singles
