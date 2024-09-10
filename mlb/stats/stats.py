@@ -37,6 +37,9 @@ class Stats:
         self.stolen_bases = 0
         self.caught_stealing = 0
 
+    def swings(self):
+        return self.number_of_pitches - self.balls - self.called_strikes
+
     def hits(self):
         return self.singles + self.doubles + self.triples + self.home_runs
 
@@ -75,6 +78,9 @@ class Stats:
 
     def swinging_strike_percentage(self):
         return self.swinging_strikes / self.number_of_pitches
+
+    def whiff_rate(self):
+        return self.swinging_strikes / self.swings()
 
     def hard_contact_percentage(self):
         return self.hard_hit_balls / self.batted_ball_events()
@@ -154,16 +160,16 @@ class Stats:
         if pitch["strikes"] == 2:
             self.two_strike_pitches += 1
 
-        if pitch["events"] == "hit_by_pitch":
-            self.hit_by_pitches += 1
-        elif pitch["events"] == "single":
+        if pitch["events"] == "single":
             self.singles += 1
         elif pitch["events"] == "double":
             self.doubles += 1
-        elif pitch["events"] == "triple":
-            self.triples += 1
         elif pitch["events"] == "home_run":
             self.home_runs += 1
+        if pitch["events"] == "hit_by_pitch":
+            self.hit_by_pitches += 1
+        elif pitch["events"] == "triple":
+            self.triples += 1
 
         if pitch["launch_speed"]:
             try:
