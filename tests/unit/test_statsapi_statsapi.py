@@ -14,6 +14,7 @@ from mlb.statsapi.statsapi import get_all_players_for_season
 from mlb.statsapi.statsapi import get_teams_for_season
 from mlb.statsapi.statsapi import get_schedule
 from mlb.statsapi.statsapi import get_schedule_by_date_range
+from mlb.statsapi.statsapi import get_team_roster
 
 from mlb.statsapi.statsapi import FIRST_MLB_YEAR
 
@@ -25,6 +26,9 @@ from mlb.statsapi.statsapi import GAME_TYPE_CODE_WILDCARD
 from mlb.statsapi.statsapi import GAME_TYPE_CODE_DIV_SERIES
 from mlb.statsapi.statsapi import GAME_TYPE_CODE_LCS
 from mlb.statsapi.statsapi import GAME_TYPE_CODE_WS
+
+from mlb.statsapi.statsapi import ROSTER_TYPE_ACTIVE
+from mlb.statsapi.statsapi import ROSTER_TYPE_FULL
 
 
 def load_statsapi_resp_from_file(file_path: str) -> dict:

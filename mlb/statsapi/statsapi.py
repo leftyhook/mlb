@@ -32,6 +32,9 @@ GAME_TYPE_CODE_DIV_SERIES = "D"
 GAME_TYPE_CODE_LCS = "L"
 GAME_TYPE_CODE_WS = "W"
 
+ROSTER_TYPE_FULL = "fullRoster"
+ROSTER_TYPE_ACTIVE = "active"
+
 
 def game_type_str(game_type_code: str) -> str:
     """Convert a single-letter game type code to its full word value"""
@@ -88,6 +91,24 @@ def _get_api_payload(url: str, params: dict = None) -> dict:
         return resp.json()
     else:
         resp.raise_for_status()
+
+
+def get_team_roster(team_id: int, season: int = None, roster_type: str = None) -> list[dict]:
+    endpoint = f"teams/{team_id}/roster"
+    url = urljoin(URL, endpoint)
+    params = {"hydrate": "person"}
+
+    if season:
+        if not is_valid_mlb_season(season):
+            raise ValueError(f"{season} is not a valid MLB season. ")
+
+        params["season"] = season
+
+    if roster_type == ROSTER_TYPE_FULL or roster_type == ROSTER_TYPE_ACTIVE:
+        params["rosterType"] = roster_type
+
+    payload = _get_api_payload(url, params)
+    return payload["roster"]
 
 
 def get_all_players_for_season(season: int = None) -> list[dict]:
