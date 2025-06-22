@@ -1,3 +1,7 @@
+def divide(numerator, divisor):
+    return (numerator / divisor) if divisor > 0 else 0
+
+
 class Stats:
     pitches: list[dict]
 
@@ -28,6 +32,7 @@ class Stats:
         self.wobacon_denom = 0
         self.xwobacon_value = 0.0
         self.estimated_ba_using_speedangle = 0.0
+        self.estimated_slg_using_speedangle = 0.0
         self.estimated_woba_using_speedangle = 0.0
         self.hard_hit_balls = 0
         self.lsa_weak = 0
@@ -49,58 +54,121 @@ class Stats:
         return self.singles + self.doubles + self.triples + self.home_runs
 
     def batting_average(self):
-        return self.hits() / self.at_bats
+        return (self.hits() / self.at_bats) if self.at_bats > 0 else 0
 
     def batted_ball_events(self):
         return self.fly_balls + self.ground_balls + self.line_drives + self.popups
 
     def expected_batting_average(self):
-        return self.estimated_ba_using_speedangle / self.at_bats
+        return divide(self.estimated_ba_using_speedangle, self.at_bats)
 
     def slugging_percentage(self):
-        return (self.singles + (self.doubles * 2) + (self.triples * 3) + (self.home_runs * 4)) / self.at_bats
+        return divide((self.singles + (self.doubles * 2) + (self.triples * 3) + (self.home_runs * 4)), self.at_bats)
+
+    def expected_slugging_percentage(self):
+        return divide(self.estimated_slg_using_speedangle, self.at_bats)
 
     def weighted_on_base_average(self):
-        return self.woba_value / self.woba_denom
+        return divide(self.woba_value, self.woba_denom)
 
     def expected_weighted_on_base_average(self):
-        return self.estimated_woba_using_speedangle / self.woba_denom
+        return divide(self.estimated_woba_using_speedangle, self.woba_denom)
 
     def wobacon(self):
-        return self.wobacon_value / self.wobacon_denom
+        return divide(self.wobacon_value, self.wobacon_denom)
 
     def xwobacon(self):
-        return self.estimated_woba_using_speedangle / self.wobacon_denom
+        return divide(self.estimated_woba_using_speedangle, self.wobacon_denom)
 
     def isolated_power(self):
         return self.slugging_percentage() - self.batting_average()
 
     def walk_percentage(self):
-        return self.walks / self.plate_appearances
+        return divide(self.walks, self.plate_appearances)
 
     def strikeout_percentage(self):
-        return self.strikeouts / self.plate_appearances
+        return divide(self.strikeouts, self.plate_appearances)
 
     def swinging_strike_percentage(self):
-        return self.swinging_strikes / self.number_of_pitches()
+        return divide(self.swinging_strikes, self.number_of_pitches())
 
     def whiff_rate(self):
-        return self.swinging_strikes / self.swings()
+        return divide(self.swinging_strikes, self.swings())
 
     def hard_contact_percentage(self):
-        return self.hard_hit_balls / self.batted_ball_events()
+        return divide(self.hard_hit_balls, self.batted_ball_events())
 
     def barrel_rate(self):
-        return self.lsa_barrel / self.batted_ball_events()
+        return divide(self.lsa_barrel, self.batted_ball_events())
 
     def barrels_per_plate_appearance(self):
-        return self.lsa_barrel / self.plate_appearances
+        return divide(self.lsa_barrel, self.plate_appearances)
 
     def good_contact_percentage(self):
-        return (self.lsa_barrel + self.lsa_solid + self.lsa_flare_burner) / self.batted_ball_events()
+        return divide((self.lsa_barrel + self.lsa_solid + self.lsa_flare_burner), self.batted_ball_events())
 
     def bad_contact_percentage(self):
-        return (self.lsa_weak + self.lsa_topped + self.lsa_under) / self.batted_ball_events()
+        return divide((self.lsa_weak + self.lsa_topped + self.lsa_under), self.batted_ball_events())
+
+    def as_dict(self):
+        return {
+            "pitches": self.number_of_pitches(),
+            "balls": self.balls,
+            "called_strikes": self.called_strikes,
+            "swinging_strikes": self.swinging_strikes,
+            "fouls_balls": self.fouls,
+            "swings": self.swings(),
+            "batted_ball_events": self.batted_ball_events(),
+            "missed_bunts": self.missed_bunts,
+            "two_strike_pitches": self.two_strike_pitches,
+            "plate_appearances": self.plate_appearances,
+            "at_bats": self.at_bats,
+            "hits": self.hits(),
+            "singles": self.singles,
+            "doubles": self.doubles,
+            "triples": self.triples,
+            "home_runs": self.home_runs,
+            "walks": self.walks,
+            "hit_by_pitches": self.hit_by_pitches,
+            "strikeouts": self.strikeouts,
+            "batting_average": self.batting_average(),
+            "xba": self.expected_batting_average(),
+            "slg": self.slugging_percentage(),
+            "xslg": self.expected_slugging_percentage(),
+            "woba": self.weighted_on_base_average(),
+            "xwoba": self.expected_weighted_on_base_average(),
+            "wobacon": self.wobacon(),
+            "xwobacon": self.xwobacon(),
+            "iso": self.isolated_power(),
+            "walk_percentage": self.walk_percentage(),
+            "strikeout_percentage": self.strikeout_percentage(),
+            "swinging_strike_percentage": self.swinging_strike_percentage(),
+            "whiff_rate": self.whiff_rate(),
+            "fly_balls": self.fly_balls,
+            "ground_balls": self.ground_balls,
+            "line_drives": self.line_drives,
+            "popups": self.popups,
+            # "woba_value": self.woba_value,
+            # "woba_denom": self.woba_denom,
+            # "wobacon_value": self.wobacon_value,
+            # "wobacon_denom": self.wobacon_denom,
+            # "xwobacon_value": self.xwobacon_value,
+            # "estimated_ba_using_speedangle": self.estimated_ba_using_speedangle,
+            # "estimated_slg_using_speedangle": self.estimated_slg_using_speedangle,
+            # "estimated_woba_using_speedangle": self.estimated_woba_using_speedangle,
+            "hard_hit_balls": self.hard_hit_balls,
+            "hard_contact_percentage": self.hard_contact_percentage(),
+            "lsa_weak": self.lsa_weak,
+            "lsa_topped": self.lsa_topped,
+            "lsa_under": self.lsa_under,
+            "bad_contact_percentage": self.bad_contact_percentage(),
+            "lsa_flare_burner": self.lsa_flare_burner,
+            "lsa_solid": self.lsa_solid,
+            "lsa_barrel": self.lsa_barrel,
+            "barrel_rate": self.barrel_rate(),
+            "barrels_per_plate_appearance": self.barrels_per_plate_appearance(),
+            "good_contact_percentage": self.good_contact_percentage()
+        }
 
     def _increment_lsa_type(self, lsa_value: int):
         if lsa_value:
@@ -197,6 +265,9 @@ class Stats:
             if pitch["estimated_ba_using_speedangle"]:
                 self.estimated_ba_using_speedangle += float(pitch["estimated_ba_using_speedangle"])
 
+            if pitch.get("estimated_slg_using_speedangle", ""):
+                self.estimated_slg_using_speedangle += float(pitch["estimated_slg_using_speedangle"])
+
         self._increment_batted_ball_type(pitch["bb_type"])
         self._increment_lsa_type(pitch["launch_speed_angle"])
 
@@ -231,6 +302,7 @@ def combine_stats(stats: list[Stats]) -> Stats:
         combined_stats.wobacon_denom += s.wobacon_denom
         combined_stats.xwobacon_value += s.xwobacon_value
         combined_stats.estimated_ba_using_speedangle += s.estimated_ba_using_speedangle
+        combined_stats.estimated_slg_using_speedangle += s.estimated_slg_using_speedangle
         combined_stats.estimated_woba_using_speedangle += s.estimated_woba_using_speedangle
         combined_stats.hard_hit_balls += s.hard_hit_balls
         combined_stats.lsa_weak += s.lsa_weak
