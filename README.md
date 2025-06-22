@@ -22,11 +22,11 @@ Python 3.9 and above
 values) according to where you want to install the package. 
   - To install to the default location (your Python version's site-packages directory): 
     ```commandline
-    python -m install <wheel filename>
+    python -m pip install <wheel filename>
     ```
   - To install to a custom directory:
     ```commandline
-    python -m install <wheel filename> --target=<directory>
+    python -m pip install <wheel filename> --target=<directory>
     ```
 
 ## Run
