@@ -163,6 +163,38 @@ def get_teams_for_season(season: int = None) -> list[dict]:
     return payload["teams"]
 
 
+def get_team_roster_for_season(team_id: int, season: int = None) -> list[dict]:
+    """
+    Get a team's roster from a given season.
+
+    Parameters:
+        team_id (int): The MLB ID that represents the franchise.
+        season (int): Optional. A year value. If omitted, the api will
+            return the team's roster for the current season.
+    Raises:
+        ValueError if an invalid team_id or season is provided.
+    Returns:
+        list[dict]: A list of dictionaries containing team information. The list
+            is extracted directly from the api payload json without modification.
+    """
+
+    endpoint = f"teams/{team_id}/roster"
+    url = urljoin(URL, endpoint)
+    params = {"hydrate": "person"}
+
+    if season:
+        if not is_valid_mlb_season(season):
+            raise ValueError(f"{season} is not a valid MLB season. ")
+
+        params["season"] = season
+
+    payload = _get_api_payload(url, params)
+    if not payload.get("roster", None):
+        raise ValueError(f"No roster returned for team id {team_id}, which likely means the team_id is invalid.")
+
+    return payload["roster"]
+
+
 def current_mlb_season() -> int:
     """
     We consider the current season to be the one in progress or,
@@ -304,6 +336,10 @@ def download_season_game_feeds(target_dir: str, season: int, game_type_code: str
                 payload = get_game_feed_from_schedule_game(game)
                 with open(file_path, "w") as file:
                     json.dump(payload, file)
+
+
+class GameFeed:
+    pass
 
 
 def monitor_gameday_feed(game_id: int):
