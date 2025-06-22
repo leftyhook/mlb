@@ -8,8 +8,9 @@ Disclaimer:
 import logging
 import requests
 
-from requests.compat import urljoin
 from io import StringIO
+from requests.compat import urljoin
+from bs4 import BeautifulSoup
 from pandas import DataFrame, read_html
 
 from mlb.statsapi.statsapi import current_mlb_season
@@ -33,8 +34,28 @@ class FanGraphsGuts:
         """
         resp = requests.get(self.url, params)
         if resp.status_code == 200:
-            tables = read_html(StringIO(resp.text), attrs={"class": "rgMasterTable"})
-            return tables[len(tables) - 1]
+            # table_class = "rgMasterTable"
+            div_class = "table-fixed"
+            soup = BeautifulSoup(resp.text, 'html.parser')
+            div_elem = soup.find('div', class_=div_class)
+
+            if div_elem:
+                table_elem = div_elem.find('table')
+                if table_elem:
+                    table_html = str(table_elem)
+                    # tables = read_html(StringIO(resp.text), attrs={"class": table_class})
+                    #tables = read_html(StringIO(table_html))
+
+                    return read_html(StringIO(table_html))[0]
+                else:
+                    raise ValueError(
+                        "Error finding Fangraphs data table: "
+                        "No table elements were found in the %s div element" % div_class
+                    )
+            else:
+                raise ValueError(
+                    "Error finding Fangraphs data table: No div elements were found with class name %s" % div_class
+                )
         else:
             resp.raise_for_status()
 
