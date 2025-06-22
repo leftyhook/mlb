@@ -54,19 +54,19 @@ class Stats:
         return self.singles + self.doubles + self.triples + self.home_runs
 
     def batting_average(self):
-        return (self.hits() / self.at_bats) if self.at_bats > 0 else 0
+        return divide(self.hits(), self.at_bats)
 
     def batted_ball_events(self):
         return self.fly_balls + self.ground_balls + self.line_drives + self.popups
 
     def expected_batting_average(self):
-        return divide(self.estimated_ba_using_speedangle, self.at_bats)
+        return divide(self.estimated_ba_using_speedangle, (self.batted_ball_events() + self.strikeouts))
 
     def slugging_percentage(self):
         return divide((self.singles + (self.doubles * 2) + (self.triples * 3) + (self.home_runs * 4)), self.at_bats)
 
     def expected_slugging_percentage(self):
-        return divide(self.estimated_slg_using_speedangle, self.at_bats)
+        return divide(self.estimated_slg_using_speedangle, (self.batted_ball_events() + self.strikeouts))
 
     def weighted_on_base_average(self):
         return divide(self.woba_value, self.woba_denom)
@@ -208,8 +208,8 @@ class Stats:
                                 pitch["events"] not in ["balk", "passed_ball", "wild_pitch"]):
             self.plate_appearances += 1
 
-            if (pitch["events"] != "catcher_interf" and "sac_bunt" not in pitch["events"]
-                    and "sac_fly" not in pitch["events"]):
+            if (pitch["events"] not in ["walk", "hit_by_pitch", "catcher_interf"] and
+                    "sac_bunt" not in pitch["events"] and "sac_fly" not in pitch["events"]):
 
                 self.at_bats += 1
 
@@ -244,12 +244,13 @@ class Stats:
         elif pitch["events"] == "triple":
             self.triples += 1
 
-        if pitch["launch_speed"]:
-            try:
-                if float(pitch["launch_speed"]) > 95:
-                    self.hard_hit_balls += 1
-            except ValueError:
-                pass
+        if pitch["description"] == "hit_into_play":
+            if pitch["launch_speed"]:
+                try:
+                    if float(pitch["launch_speed"]) >= 95:
+                        self.hard_hit_balls += 1
+                except ValueError:
+                    pass
 
         self.woba_value += 0 if not pitch["woba_value"] else float(pitch["woba_value"])
         self.woba_denom += 0 if not pitch["woba_denom"] else int(float(pitch["woba_denom"]))
@@ -269,7 +270,9 @@ class Stats:
                 self.estimated_slg_using_speedangle += float(pitch["estimated_slg_using_speedangle"])
 
         self._increment_batted_ball_type(pitch["bb_type"])
-        self._increment_lsa_type(pitch["launch_speed_angle"])
+
+        if pitch["launch_speed_angle"]:
+            self._increment_lsa_type(int(float(pitch["launch_speed_angle"])))
 
 
 def combine_stats(stats: list[Stats]) -> Stats:
