@@ -7,6 +7,7 @@ class Stats:
 
     def __init__(self):
         self.pitches = []
+        self.number_of_pitches = 0
         self.balls = 0
         self.called_strikes = 0
         self.swinging_strikes = 0
@@ -44,11 +45,11 @@ class Stats:
         self.stolen_bases = 0
         self.caught_stealing = 0
 
-    def number_of_pitches(self):
-        return len(self.pitches)
+    # def number_of_pitches(self):
+    #     return len(self.pitches)
 
     def swings(self):
-        return self.number_of_pitches() - self.balls - self.called_strikes
+        return self.number_of_pitches - self.balls - self.called_strikes
 
     def hits(self):
         return self.singles + self.doubles + self.triples + self.home_runs
@@ -90,7 +91,7 @@ class Stats:
         return divide(self.strikeouts, self.plate_appearances)
 
     def swinging_strike_percentage(self):
-        return divide(self.swinging_strikes, self.number_of_pitches())
+        return divide(self.swinging_strikes, self.number_of_pitches)
 
     def whiff_rate(self):
         return divide(self.swinging_strikes, self.swings())
@@ -112,7 +113,7 @@ class Stats:
 
     def as_dict(self):
         return {
-            "pitches": self.number_of_pitches(),
+            "pitches": self.number_of_pitches,
             "balls": self.balls,
             "called_strikes": self.called_strikes,
             "swinging_strikes": self.swinging_strikes,
@@ -148,14 +149,14 @@ class Stats:
             "ground_balls": self.ground_balls,
             "line_drives": self.line_drives,
             "popups": self.popups,
-            # "woba_value": self.woba_value,
-            # "woba_denom": self.woba_denom,
-            # "wobacon_value": self.wobacon_value,
-            # "wobacon_denom": self.wobacon_denom,
-            # "xwobacon_value": self.xwobacon_value,
-            # "estimated_ba_using_speedangle": self.estimated_ba_using_speedangle,
-            # "estimated_slg_using_speedangle": self.estimated_slg_using_speedangle,
-            # "estimated_woba_using_speedangle": self.estimated_woba_using_speedangle,
+            "woba_value": self.woba_value,
+            "woba_denom": self.woba_denom,
+            "wobacon_value": self.wobacon_value,
+            "wobacon_denom": self.wobacon_denom,
+            "xwobacon_value": self.xwobacon_value,
+            "estimated_ba_using_speedangle": self.estimated_ba_using_speedangle,
+            "estimated_slg_using_speedangle": self.estimated_slg_using_speedangle,
+            "estimated_woba_using_speedangle": self.estimated_woba_using_speedangle,
             "hard_hit_balls": self.hard_hit_balls,
             "hard_contact_percentage": self.hard_contact_percentage(),
             "lsa_weak": self.lsa_weak,
@@ -167,7 +168,9 @@ class Stats:
             "lsa_barrel": self.lsa_barrel,
             "barrel_rate": self.barrel_rate(),
             "barrels_per_plate_appearance": self.barrels_per_plate_appearance(),
-            "good_contact_percentage": self.good_contact_percentage()
+            "good_contact_percentage": self.good_contact_percentage(),
+            "stolen_bases": self.stolen_bases,
+            "caught_stealing": self.caught_stealing,
         }
 
     def _increment_lsa_type(self, lsa_value: int):
@@ -199,6 +202,7 @@ class Stats:
 
     def add_pitch(self, pitch):
         self.pitches.append(pitch)
+        self.number_of_pitches += 1
 
         # A batter does not receive a plate appearance if a runner is thrown out on the bases to end the inning while
         # he is at bat, or if the game-winning run scores on a balk, wild pitch, or passed ball while he is at bat.
@@ -280,6 +284,7 @@ def combine_stats(stats: list[Stats]) -> Stats:
 
     for s in stats:
         combined_stats.pitches.extend(s.pitches)
+        combined_stats.number_of_pitches += s.number_of_pitches
         combined_stats.balls += s.balls
         combined_stats.called_strikes += s.called_strikes
         combined_stats.swinging_strikes += s.swinging_strikes
