@@ -111,6 +111,9 @@ class Stats:
     def bad_contact_percentage(self):
         return divide((self.lsa_weak + self.lsa_topped + self.lsa_under), self.batted_ball_events())
 
+    def homerun_percentage(self):
+        return divide(self.home_runs, self.plate_appearances)
+
     def as_dict(self):
         return {
             "pitches": self.number_of_pitches,
