@@ -7,6 +7,8 @@ Disclaimer:
 """
 import logging
 import json
+from datetime import timedelta
+
 import requests
 import datetime
 
@@ -306,13 +308,17 @@ def get_game_feed_from_schedule_game(game: dict) -> dict:
     return _get_api_payload(url)
 
 
-def download_season_game_feeds(target_dir: str, season: int, game_type_code: str = None):
+def download_season_game_feeds(target_dir: str, season: int, force: bool, game_type_code: str = None):
     """
     Download every previously un-downloaded game feed for an entire mlb season to date.
+    Games occurring today and yesterdayare an exception
 
     Parameters:
         target_dir (str): Where to look for previously downloaded files, and write new files to.
         season (int): The year of the mlb season.
+        force (bool): When True, force the game feed to be downloaded and written to file even if the file already
+            exists - except for games occurring today or yesterday, which will always be downloaded and written to
+            file. A game feed dated today or yesterday may have been downloaded while the game was still in progress.
         game_type_code (str): Optional. A statsapi game type code. If omitted, all games scheduled
             for the season, including preseason and playoffs, will be downloaded.
     """
@@ -320,22 +326,46 @@ def download_season_game_feeds(target_dir: str, season: int, game_type_code: str
     team_map = {team["id"]: team["abbreviation"] for team in teams}
 
     today_iso = datetime.date.today().isoformat()
+    yesterday_iso = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
+
+    logging.info("Getting %d season schedule." % season)
     schedule = get_season_schedule(season, game_type_code)
+
+    logging.info("Begin downloading game feeds for %d season. 'force' overwrite is set to %s." % (season, force))
     for game_date in schedule:
-        if game_date["date"] < today_iso:
-            break
+        if game_date["date"] > today_iso:
+            logging.info("Skipping game feeds for %s because it is in the future." % game_date["date"])
+            continue
+        else:
+            logging.info("Processing %d games for %s" % (len(game_date["games"]), game_date["date"]))
 
         for game in game_date["games"]:
-            game_date = game["officialDate"].replace("-", "")
+            official_date = game["officialDate"]
             game_pk = game["gamePk"]
             away_id = game["teams"]["away"]["team"]["id"]
             home_id = game["teams"]["home"]["team"]["id"]
-            file_name = f"{game_date}.{game_pk}.{team_map[away_id]}@{team_map[home_id]}.json"
+            file_name = f"{official_date}.{game_pk}.{team_map[away_id]}@{team_map[home_id]}.json"
             file_path = path.join(target_dir, file_name)
-            if not path.exists(file_path):
+
+            do_download = (
+                game_date["date"] == today_iso or game_date["date"] == yesterday_iso or
+                not path.exists(file_path) or force
+            )
+
+            if not force and path.exists(file_path) and official_date != game_date["date"]:
+                with open(file_path, "r", encoding='utf-8') as file:
+                    doc = json.load(file)
+                    do_download = (doc["gameData"]["status"]["statusCode"] != game["status"]["statusCode"])
+
+            if do_download:
                 payload = get_game_feed_from_schedule_game(game)
-                with open(file_path, "w") as file:
-                    json.dump(payload, file)
+                with open(file_path, "w", encoding='utf-8') as file:
+                    json.dump(payload, file, ensure_ascii=False)
+            else:
+                logging.info(
+                    "Skipping %s@%s game on %s. File already exists." %
+                    (team_map[away_id], team_map[home_id], official_date)
+                )
 
 
 class GameFeed:
